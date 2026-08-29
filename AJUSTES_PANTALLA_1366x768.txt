@@ -1,0 +1,25 @@
+AJUSTES PARA PANTALLAS 1366x768
+================================
+
+1. FrmPacientes
+   - Filtros: anclados a izquierda/derecha.
+   - Grilla: anclada a los cuatro lados.
+   - Panel inferior: anclado al borde inferior.
+   - Resultado: los botones Nuevo, Editar, Consultar y Desactivar ya no quedan fuera de pantalla.
+
+2. FrmCitas
+   - Mismo ajuste adaptable para filtros, grilla y panel inferior.
+
+3. FrmAtenciones
+   - Se completa el anclaje del panel de filtros.
+   - La grilla y botones ya tenían anclaje adaptable en el proyecto original.
+
+4. FrmReportes
+   - No requirió cambio: ya utiliza Dock=Top y Dock=Fill correctamente.
+
+5. FrmAtencionEdicion
+   - Se eliminó el foreach de InitializeComponent/Designer, que impedía abrir el diseñador visual.
+   - El foreach pasó a FrmAtencionEdicion.cs.
+   - Se agregó ajuste proporcional automático solo si la ventana no cabe en el área útil de pantalla.
+
+No se modificó lógica de negocio, acceso a datos, SQL ni reglas clínicas.

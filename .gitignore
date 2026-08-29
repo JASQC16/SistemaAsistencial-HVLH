@@ -1,0 +1,20 @@
+## Visual Studio / .NET
+bin/
+obj/
+.vs/
+*.user
+*.suo
+*.userprefs
+*.cache
+packages/
+!packages/build/
+*.dbmdl
+*.pdb
+
+## Logs generados en tiempo de ejecución
+Logs/
+*.log
+
+## Sistema operativo
+Thumbs.db
+.DS_Store

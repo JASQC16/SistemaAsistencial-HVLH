@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A1000006-1111-4A01-9E01-000000000006}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Hospital.Presentacion</RootNamespace>
+    <AssemblyName>Hospital.Presentacion</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <RestoreProjectStyle>PackageReference</RestoreProjectStyle>
+    <LangVersion>7.3</LangVersion>
+    <ApplicationIcon>Recursos\hvlh.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Net.Http" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Formularios\FrmAtencionEdicion.Designer.cs">
+      <DependentUpon>FrmAtencionEdicion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\FrmAtencionEdicion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FrmAtenciones.Designer.cs">
+      <DependentUpon>FrmAtenciones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\FrmAtenciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FrmBuscarPaciente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FrmCitaEdicion.Designer.cs">
+      <DependentUpon>FrmCitaEdicion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\FrmCitaEdicion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FrmCitas.Designer.cs">
+      <DependentUpon>FrmCitas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\FrmCitas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FrmLogin.Designer.cs">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\FrmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FrmMotivo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FrmPacienteEdicion.Designer.cs">
+      <DependentUpon>FrmPacienteEdicion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\FrmPacienteEdicion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FrmPacientes.Designer.cs">
+      <DependentUpon>FrmPacientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\FrmPacientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FrmPrincipal.Designer.cs">
+      <DependentUpon>FrmPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\FrmPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FrmReportes.Designer.cs">
+      <DependentUpon>FrmReportes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\FrmReportes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FrmTextoBreve.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Avisos.cs" />
+    <Compile Include="ElementoLista.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Recursos.cs" />
+    <Compile Include="Tema.cs" />
+    <Compile Include="Controles\EncabezadoHvlh.cs">
+      <SubType>Component</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json">
+      <Version>13.0.3</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.ReportingServices.ReportViewerControl.Winforms">
+      <Version>150.1652.0</Version>
+    </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Hospital.Entidades\Hospital.Entidades.csproj">
+      <Project>{A1000001-1111-4A01-9E01-000000000001}</Project>
+      <Name>Hospital.Entidades</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Hospital.Utilidades\Hospital.Utilidades.csproj">
+      <Project>{A1000002-1111-4A01-9E01-000000000002}</Project>
+      <Name>Hospital.Utilidades</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Hospital.AccesoDatos\Hospital.AccesoDatos.csproj">
+      <Project>{A1000003-1111-4A01-9E01-000000000003}</Project>
+      <Name>Hospital.AccesoDatos</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Hospital.Integracion\Hospital.Integracion.csproj">
+      <Project>{A1000004-1111-4A01-9E01-000000000004}</Project>
+      <Name>Hospital.Integracion</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Hospital.Negocio\Hospital.Negocio.csproj">
+      <Project>{A1000005-1111-4A01-9E01-000000000005}</Project>
+      <Name>Hospital.Negocio</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <!-- El RDLC y los recursos graficos van incrustados en el ensamblado y ademas se
+         copian a la carpeta de salida: el formulario intenta primero el recurso
+         incrustado y usa el archivo en disco como respaldo. -->
+    <EmbeddedResource Include="Reportes\rptGeneralHVLH.rdlc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Recursos\logo-hvlh.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Recursos\logo-hvlh-reporte.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Recursos\hvlh.ico">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
